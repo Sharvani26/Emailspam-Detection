@@ -1,0 +1,46 @@
+<!DOCTYPE html>    
+<html>    
+<head>   
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>Spam Detection</title> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='Styling.css') }}">   
+</head>    
+<body>
+  <div class="container" id="container">
+		<div class="form-container log-in-container">
+    <div class="Emailspam">
+        <form id = "Emailspam" action= "/predict" method="post" enctype="multipart/form-data">
+        <br><br><br><br><br>
+        <h1>Email Spam Detection</h1>
+        <br>
+        <label>
+        <br>
+        <b>Input 
+        </b>    
+        </label> 
+        <br> 
+        <input type="text" name="spam" id="spam" placeholder="Enter an email">    
+        <br><br> 
+        <button class="button" type="submit">Submit</button>       
+        <br><br><br><br><br><br>
+      </div>  
+    </form> 
+    </div> 
+    <div class="overlay-container">
+      <div class="overlay">
+          <div class="overlay-panel overlay-right">
+              <h1>Spam Detection</h1>
+              <div>
+                <br>
+                <label style="color:black">{{h}}</label>
+              </div>
+              <br><br>
+              <br>
+          </div>  
+      </div>  
+  </div>   
+</div>   
+</body>    
+</html>
